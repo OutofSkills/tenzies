@@ -47,16 +47,13 @@ main {
 .die-face {
     height: 50px;
     width: 50px;
+    padding: 2.5px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
-}
-
-.die-num {
-    font-size: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .roll-dice {
@@ -77,4 +74,38 @@ main {
 
 .roll-dice:active {
     box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.dot {
+    background: #000;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    justify-self: center;
+    align-items: center;
+    margin-top: 0.25em;
+}
+
+.dot__top {
+    grid-row-start: 1;
+}
+
+.dot__middle {
+    grid-row-start: 2;
+}
+
+.dot__bottom {
+    grid-row-end: -1;
+}
+
+.dot__left {
+    grid-column-start: 1;
+}
+
+.dot__center {
+    grid-column-start: 2;
+}
+
+.dot__right {
+    grid-column-end: -1;
 }
