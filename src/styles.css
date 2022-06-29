@@ -13,6 +13,11 @@ body {
     align-items: center;
 }
 
+.game--container {
+    display: inline-flex;
+    gap: 1.5rem;
+}
+
 main {
     background-color: #F5F5F5;
     height: 400px;
@@ -108,4 +113,41 @@ main {
 
 .dot__right {
     grid-column-end: -1;
+}
+
+/*--- Statistics window---*/
+.statistics {
+    border-radius: 5px;
+    padding: 20px;
+    background: #F5F5F5;
+    text-align: center;
+}
+
+.statistics__title {
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (max-width: 840px){
+    .game--container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
